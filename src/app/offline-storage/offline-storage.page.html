@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Offline Storage</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-input type=text [(ngModel)]="name" placeholder="Enter your name">
+    </ion-input>
+  </ion-item>
+
+  <ion-button (click)="save()">Save</ion-button>
+
+  <ion-button (click)="getName()">Get Name</ion-button>
+  <ion-button (click)="getImage()">Get Image</ion-button>
+
+  <div *ngIf="Name">
+    Name: {{Name}}
+  </div>
+
+  <div *ngIf="pic">
+    <img [src]="pic" height="100px" width="100px" />
+  </div>
+</ion-content>

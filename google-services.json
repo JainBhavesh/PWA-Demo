@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "878139400715",
+    "firebase_url": "https://sapphire-ffd58.firebaseio.com",
+    "project_id": "sapphire-ffd58",
+    "storage_bucket": "sapphire-ffd58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:878139400715:android:7fba4476e668caab",
+        "android_client_info": {
+          "package_name": "app.sapphire"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "878139400715-r88lml7vmjl3g5l9g4759j6m1565bjti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAF1oNHqr2rA3VNttWLF3UwvQRiBCFFY6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "878139400715-r88lml7vmjl3g5l9g4759j6m1565bjti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-button (click)="takePhoto()">Take Photo</ion-button> -->
+  <webcam [height]="500" [width]="500" [trigger]="triggerObservable"
+    (imageCapture)="handleImage($event)" *ngIf="showWebcam"
+    [allowCameraSwitch]="allowCameraSwitch"
+    [switchCamera]="nextWebcamObservable"
+    [videoOptions]="videoOptions"
+    [imageQuality]="1"
+    (cameraSwitched)="cameraWasSwitched($event)"
+    (initError)="handleInitError($event)"></webcam>
+  <br/>
+    <ion-button class="actionBtn" *ngIf="showWebcam"
+      (click)="triggerSnapshot();">
+      Take A Snapshot
+    </ion-button>
+    <ion-button class="actionBtn" (click)="toggleWebcam();">
+      Toggle cam
+    </ion-button><br />
+
+
+    <img *ngIf="webcamImage" [src]="webcamImage?.imageAsDataUrl" height="500px"
+      width="500px" />
+
+    <div margin-vertical padding style="border: 1px solid grey;">
+      <ion-input [ngModel]="notification.token"></ion-input>
+    </div>
+
+    <h4 *ngIf="errors.length> 0">Messages:</h4>
+    <ul *ngFor="let error of errors">
+      <li>{{error | json}}</li>
+    </ul>
+  </ion-content>
+  <ion-footer *ngIf="showBtn">
+    <div (click)="add_to_home()"> Add to your homescreen </div>
+  </ion-footer>
